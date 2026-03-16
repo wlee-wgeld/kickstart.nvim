@@ -861,7 +861,9 @@ require('lazy').setup({
       require('nvim-treesitter').install(filetypes)
       vim.api.nvim_create_autocmd('FileType', {
         pattern = filetypes,
-        callback = function() vim.treesitter.start() end,
+        callback = function()
+          if pcall(vim.treesitter.start) then return end
+        end,
       })
     end,
   },
