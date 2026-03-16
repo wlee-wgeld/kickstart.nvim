@@ -2,8 +2,10 @@ tags
 test.sh
 .luarc.json
 nvim
+*.log
 
 spell/
+tmp/
 
 # You can uncomment this yourself if you want to lock the lazy-lock.json,
 # but for kickstart, it makes sense to leave it ignored.
